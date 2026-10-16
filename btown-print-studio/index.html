@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Btown Print Studio</title>
+<meta name="description" content="Brampton & the GTA's go-to print shop. Banners, signs, business cards, stickers and flyers printed fast and affordably, with free GTA delivery and in-house graphic design to bring your vision to life.">
+<meta name="keywords" content="print shop Brampton, printing Brampton, GTA printing, banner printing Brampton, lawn signs Brampton, business cards Brampton, sticker printing GTA, same day printing Brampton, graphic design Brampton">
+<link rel="canonical" href="https://btownprintstudio.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Btown Print Studio | Brampton & the GTA's go-to print shop">
+<meta property="og:description" content="Fast, affordable printing with free GTA delivery and in-house design. Get an instant quote in seconds.">
+<meta property="og:url" content="https://btownprintstudio.com/">
+<meta property="og:locale" content="en_CA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://btownprintstudio.com/#business",
+  "name": "Btown Print Studio",
+  "alternateName": "BtownPrintStudio",
+  "description": "Brampton and GTA print shop for banners, signs, business cards, stickers, flyers and graphic design. Fast turnaround, affordable pricing, free GTA delivery.",
+  "url": "https://btownprintstudio.com/",
+  "image": "https://btownprintstudio.com/og.jpg",
+  "priceRange": "$",
+  "address": { "@type": "PostalAddress", "addressLocality": "Brampton", "addressRegion": "ON", "addressCountry": "CA" },
+  "areaServed": ["Brampton","Mississauga","Toronto","Vaughan","Caledon","Oakville","Milton","Markham","Richmond Hill","Etobicoke","Scarborough"],
+  "sameAs": ["https://www.instagram.com/btownprintstudio/"],
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banner printing"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lawn sign and coroplast sign printing"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Business card printing"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sticker and label printing"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Flyer and marketing print"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Graphic design"}}
+  ]
+}
+</script>
+<style>
+/* Layout concept: full-bleed colour bands in the peach/lime/teal palette, chunky rounded "sticker" shapes,
+   one bold moment (the scroll-driven printer) and a working quote tool above the fold. */
+:root{
+  --coral:#E8674A; --coral-deep:#D2503A;
+  --salmon:#F0A08C; --peach:#F8CFBE; --cream:#FBE6B4; --lime:#C8D47E; --lime-deep:#A9B95B; --teal:#2B9C79; --teal-deep:#1F7A5E;
+  --ink:#2E2622; --ink-soft:#5C4F48; --paper:#FFF8F0; --white:#FFFFFF;
+  --bg:var(--paper); --fg:var(--ink);
+  --display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --body:"Figtree", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --r-lg:28px; --r-md:18px; --r-sm:12px;
+  --shadow:0 10px 30px rgba(46,38,34,.12);
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-variation-settings:"SOFT" 60,"WONK" 1;font-weight:800;line-height:1.02;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.6rem,6.4vw,5.2rem)}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--teal-deep)}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,8vw,112px)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1rem;padding:.95rem 1.5rem;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease,background .15s;font-family:var(--body);line-height:1}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.btn-coral{background:var(--coral);color:var(--white)}
+.btn-coral:hover{background:var(--coral-deep)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-lg{font-size:1.1rem;padding:1.15rem 1.9rem}
+
+/* Nav */
+.topbar{background:var(--teal);color:var(--white);font-size:.9rem;font-weight:600;text-align:center;padding:.45rem 1rem}
+.topbar b{color:var(--cream)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,248,240,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(46,38,34,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:var(--coral);color:var(--white);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:1.5rem;transform:rotate(-6deg)}
+.logo-word{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1}
+.logo-word small{display:block;font-family:var(--body);font-weight:700;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-deep);margin-top:.15rem}
+.nav-links{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-weight:600}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--coral-deep)}
+@media (max-width:860px){.nav-links{display:none}}
+
+/* Hero */
+.hero{background:var(--peach);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding-block:clamp(48px,7vw,96px)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1 em{font-style:italic;color:var(--coral-deep)}
+.hero-sub{font-size:1.2rem;color:var(--ink-soft);max-width:34rem;margin-top:1.2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.trust{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--white);border-radius:999px;padding:.45rem .85rem;font-size:.86rem;font-weight:700;box-shadow:0 2px 0 rgba(46,38,34,.08)}
+.chip svg{width:16px;height:16px}
+.hero-art{position:relative;min-height:380px}
+.sticker{position:absolute;border-radius:var(--r-md);padding:1rem 1.2rem;font-family:var(--display);font-weight:800;box-shadow:var(--shadow);background:var(--white)}
+.sticker.s1{top:6%;left:4%;width:62%;aspect-ratio:3/1.4;background:var(--lime);display:flex;align-items:end;font-size:1.6rem;transform:rotate(-5deg)}
+.sticker.s2{top:36%;right:2%;width:46%;aspect-ratio:7/4;background:var(--coral);color:var(--white);font-size:1.4rem;transform:rotate(6deg);display:flex;align-items:center;justify-content:center;text-align:center}
+.sticker.s3{bottom:4%;left:10%;width:34%;aspect-ratio:1;border-radius:50%;background:var(--cream);display:grid;place-items:center;text-align:center;font-size:1.05rem;transform:rotate(-10deg);border:4px dashed var(--coral)}
+.sticker.s4{bottom:12%;right:22%;width:30%;aspect-ratio:3.5/2;background:var(--teal);color:var(--white);font-size:.95rem;transform:rotate(3deg);display:flex;align-items:center}
+.sticker.s4 span{font-family:var(--body);font-weight:600;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;display:block;opacity:.85}
+.hero .blob{position:absolute;width:48vw;height:48vw;max-width:560px;max-height:560px;border-radius:50%;background:var(--salmon);opacity:.45;right:-14vw;top:-18vw;pointer-events:none}
+.hero .blob2{position:absolute;width:30vw;height:30vw;max-width:360px;max-height:360px;border-radius:50%;background:var(--cream);opacity:.7;left:-12vw;bottom:-14vw;pointer-events:none}
+
+/* Quote tool */
+.quote{background:var(--lime)}
+.quote-head{text-align:center;max-width:46rem;margin:0 auto 2.2rem}
+.quote-head p{color:var(--ink-soft);font-size:1.1rem;margin-top:.8rem}
+.qgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:1.5rem;align-items:start}
+@media (max-width:900px){.qgrid{grid-template-columns:1fr}}
+.panel{background:var(--white);border-radius:var(--r-lg);padding:1.6rem;box-shadow:var(--shadow)}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field label{font-weight:700;font-size:.9rem}
+.field input,.field select{font:inherit;padding:.75rem .9rem;border-radius:var(--r-sm);border:2px solid #E8DCD2;background:var(--paper);min-width:0;width:100%}
+.field input:focus,.field select:focus{border-color:var(--teal)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.9rem}
+.row.three{grid-template-columns:1fr 1fr 1fr}
+@media (max-width:520px){.row.three{grid-template-columns:1fr 1fr}}
+.presets{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+.preset{font:inherit;font-weight:700;font-size:.8rem;background:var(--cream);border:0;border-radius:999px;padding:.4rem .75rem;cursor:pointer}
+.preset:hover{background:var(--salmon)}
+.preset[aria-pressed="true"]{background:var(--coral);color:var(--white)}
+.drop{display:block;margin-top:1rem;border:2px dashed var(--teal);border-radius:var(--r-md);padding:1.2rem;text-align:center;background:#F3F8EA;cursor:pointer;transition:background .15s}
+.drop:hover,.drop.over{background:#E6F1D3}
+.drop strong{display:block}
+.drop small{color:var(--ink-soft)}
+.drop input{display:none}
+.filecheck{margin-top:.6rem;border-radius:var(--r-sm);padding:.7rem .9rem;font-size:.9rem;font-weight:600;display:none}
+.filecheck.ok{display:block;background:#DDF2E7;color:var(--teal-deep)}
+.filecheck.warn{display:block;background:var(--cream);color:#8A5A12}
+.toggle{display:flex;gap:.4rem;background:var(--paper);padding:.3rem;border-radius:999px;border:2px solid #E8DCD2}
+.toggle button{flex:1;font:inherit;font-weight:700;font-size:.85rem;border:0;background:transparent;border-radius:999px;padding:.5rem;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.9rem}
+@media (max-width:520px){.checks{grid-template-columns:1fr}}
+.check{display:flex;align-items:center;gap:.5rem;font-size:.92rem;font-weight:600;background:var(--paper);padding:.6rem .8rem;border-radius:var(--r-sm);cursor:pointer}
+.check input{accent-color:var(--coral);width:18px;height:18px}
+.preview{background:var(--cream);border-radius:var(--r-md);padding:.8rem;position:relative}
+.preview svg{width:100%;height:auto;display:block}
+.preview-cap{font-size:.95rem;font-weight:600;margin-top:.8rem;text-align:center;color:var(--ink-soft)}
+.preview-cap b{color:var(--ink)}
+.compare{display:flex;gap:.4rem;justify-content:center;margin-top:.8rem;flex-wrap:wrap}
+.price{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-top:1.3rem;padding-top:1.2rem;border-top:2px dashed #E8DCD2;flex-wrap:wrap}
+.price .amt{font-family:var(--display);font-weight:900;font-size:3rem;line-height:1;font-variant-numeric:tabular-nums}
+.price .amt small{font-size:1rem;font-family:var(--body);font-weight:700;color:var(--ink-soft)}
+.price .meta{font-size:.9rem;color:var(--ink-soft)}
+.breakdown{font-size:.88rem;color:var(--ink-soft);margin-top:.6rem;display:flex;flex-wrap:wrap;gap:.3rem .9rem}
+.breakdown span b{color:var(--ink)}
+.quote-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.fineprint{font-size:.8rem;color:var(--ink-soft);margin-top:.8rem}
+.sent{display:none;margin-top:.8rem;background:#DDF2E7;color:var(--teal-deep);padding:.8rem 1rem;border-radius:var(--r-sm);font-weight:600}
+
+/* Printer scroll scene */
+.print-scene{background:var(--paper);position:relative;height:300vh}
+.print-sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem;overflow:hidden}
+@media (max-width:900px){.print-sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-content:start;padding-top:2rem}}
+.print-copy h2{margin-top:.6rem}
+.print-copy p{font-size:1.15rem;color:var(--ink-soft);max-width:30rem;margin-top:1rem}
+.print-steps{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:.6rem}
+.print-steps li{display:flex;gap:.8rem;align-items:center;font-weight:700;opacity:.35;transition:opacity .3s,transform .3s;transform:translateX(0)}
+.print-steps li.on{opacity:1;transform:translateX(6px)}
+.print-steps li i{width:30px;height:30px;border-radius:50%;background:var(--peach);display:grid;place-items:center;font-style:normal;font-size:.85rem;flex:none}
+.print-steps li.on i{background:var(--coral);color:var(--white)}
+.printer{position:relative;width:min(100%,520px);margin:0 auto;aspect-ratio:1/1}
+.printer .machine{position:absolute;left:0;right:0;top:30%;height:36%;background:var(--ink);border-radius:26px 26px 20px 20px;box-shadow:0 30px 50px -20px rgba(46,38,34,.5);z-index:3}
+.printer .machine::before{content:"";position:absolute;left:8%;right:8%;top:-8%;height:14%;background:#443832;border-radius:16px 16px 0 0}
+.printer .machine::after{content:"";position:absolute;left:6%;right:6%;bottom:26%;height:7px;background:var(--paper);border-radius:4px;opacity:.9}
+.printer .light{position:absolute;right:10%;top:52%;width:12px;height:12px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime);z-index:4}
+.printer .light.busy{background:var(--coral);box-shadow:0 0 14px var(--coral);animation:blink .6s infinite alternate}
+@keyframes blink{to{opacity:.3}}
+.printer .label{position:absolute;left:8%;top:50%;color:var(--peach);font-family:var(--display);font-weight:800;font-size:1.05rem;z-index:4;letter-spacing:.02em}
+.printer .tray{position:absolute;left:4%;right:4%;top:58%;height:8%;background:#3B2F2A;border-radius:0 0 18px 18px;z-index:1}
+.sheet{position:absolute;left:14%;width:72%;top:62%;border-radius:12px;box-shadow:0 18px 30px -10px rgba(46,38,34,.35);z-index:2;overflow:hidden;will-change:transform,clip-path;display:grid;place-items:center;text-align:center;padding:1.2rem}
+.sheet h3{font-size:clamp(1.3rem,3.2vw,2rem);line-height:1}
+.sheet p{font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-top:.4rem;opacity:.8}
+.sheet.a{background:var(--coral);color:var(--white);aspect-ratio:3/1.6}
+.sheet.b{background:var(--cream);color:var(--ink);aspect-ratio:3/1.6}
+.sheet.c{background:var(--teal);color:var(--white);aspect-ratio:3/1.6}
+.sheet .deco{position:absolute;inset:0;pointer-events:none;opacity:.25}
+.scroll-hint{position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+@media (prefers-reduced-motion:reduce){.print-scene{height:auto}.print-sticky{position:static;height:auto;padding-block:4rem}.sheet{position:relative;left:auto;width:100%;top:auto;margin-top:1rem}.printer{aspect-ratio:auto}.printer .machine,.printer .tray,.printer .light,.printer .label{display:none}.print-steps li{opacity:1}}
+
+/* Services */
+.services{background:var(--white)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.sec-head p{color:var(--ink-soft);max-width:30rem;font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.card{border-radius:var(--r-lg);padding:1.5rem;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;gap:1rem;text-decoration:none;transition:transform .15s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px) rotate(-.5deg)}
+.card svg{width:52px;height:52px}
+.card .from{font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em}
+.card p{font-size:.95rem;opacity:.85}
+.c-peach{background:var(--peach)}.c-lime{background:var(--lime)}.c-cream{background:var(--cream)}.c-coral{background:var(--coral);color:var(--white)}.c-teal{background:var(--teal);color:var(--white)}.c-salmon{background:var(--salmon)}
+
+/* Why */
+.why{background:var(--teal);color:var(--white)}
+.why .eyebrow{color:var(--cream)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+.pillar{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-lg);padding:1.6rem}
+.pillar .big{font-family:var(--display);font-weight:900;font-size:3rem;line-height:1;color:var(--cream)}
+.pillar h3{margin-top:.8rem}
+.pillar p{margin-top:.5rem;opacity:.9}
+
+/* Design */
+.design{background:var(--cream)}
+.design .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+@media (max-width:900px){.design .wrap{grid-template-columns:1fr}}
+.design ul{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.7rem}
+.design li{display:flex;gap:.7rem;align-items:start;font-weight:600}
+.design li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--coral);flex:none;margin-top:.15rem;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/70% no-repeat var(--coral);mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/70% no-repeat}
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center}
+.ba{border-radius:var(--r-md);aspect-ratio:4/5;padding:1rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow)}
+.ba.napkin{background:#FFFDF7;border:2px dashed #CDBFAE;font-family:"Comic Sans MS","Bradley Hand",cursive;color:#7C6B5E;transform:rotate(-3deg)}
+.ba.final{background:var(--coral);color:var(--white);transform:rotate(2deg)}
+.ba .tag{font-family:var(--body);font-weight:800;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.ba .t{font-family:var(--display);font-weight:900;font-size:1.8rem;line-height:1}
+
+/* Process */
+.process{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem;counter-reset:step}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--paper);border-radius:var(--r-lg);padding:1.4rem;counter-increment:step}
+.step::before{content:counter(step);display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);font-family:var(--display);font-weight:900;font-size:1.2rem}
+.step h3{margin-top:.9rem}
+.step p{color:var(--ink-soft);margin-top:.4rem;font-size:.95rem}
+
+/* Reviews */
+.reviews{background:var(--peach)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:var(--white);border-radius:var(--r-lg);padding:1.5rem}
+.stars{color:var(--coral);letter-spacing:.1em;font-size:1.1rem}
+.rev p{margin-top:.6rem}
+.rev footer{margin-top:1rem;font-weight:700;font-size:.9rem}
+.rev footer span{display:block;font-weight:500;color:var(--ink-soft)}
+
+/* Area + FAQ */
+.area{background:var(--white)}
+.area .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media (max-width:900px){.area .wrap{grid-template-columns:1fr}}
+.cities{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.cities span{background:var(--lime);border-radius:999px;padding:.4rem .9rem;font-weight:700;font-size:.9rem}
+.faq details{border-bottom:2px solid var(--peach);padding:.9rem 0}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font-size:1.05rem}
+.faq summary::after{content:"+";font-family:var(--display);font-size:1.5rem;color:var(--coral);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:.6rem;color:var(--ink-soft)}
+
+/* CTA + footer */
+.cta{background:var(--coral);color:var(--white);text-align:center}
+.cta p{font-size:1.2rem;opacity:.92;max-width:36rem;margin:1rem auto 0}
+.cta .hero-cta{justify-content:center}
+.cta .btn-ink{background:var(--ink)}
+.cta .btn-ghost{border-color:var(--white);color:var(--white)}
+footer.site{background:var(--ink);color:var(--peach);padding-block:3rem}
+footer.site .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+@media (max-width:860px){footer.site .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){footer.site .wrap{grid-template-columns:1fr}}
+footer.site a,footer.site p{overflow-wrap:anywhere}
+footer.site h4{margin:0 0 .6rem;font-family:var(--body);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
+footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+footer.site a{text-decoration:none;opacity:.9}
+footer.site a:hover{opacity:1;text-decoration:underline}
+.copy{margin-top:2rem;font-size:.85rem;opacity:.7;grid-column:1/-1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<div class="topbar">🚚 <b>Free delivery across the GTA</b> &nbsp;·&nbsp; 24-hour rush available &nbsp;·&nbsp; Print-ready support from real people</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Btown Print Studio home">
+      <span class="logo-mark">B</span>
+      <span class="logo-word">Btown Print Studio<small>Design · Print · Deliver</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#design">Design help</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-coral" href="#quote">Instant quote</a>
+  </div>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob" aria-hidden="true"></div><div class="blob2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Brampton · Mississauga · Toronto · all of the GTA</p>
+      <h1 style="margin-top:.8rem">Brampton &amp; the GTA's <em>go-to</em> print shop.</h1>
+      <p class="hero-sub">Banners, signs, cards, stickers and flyers printed fast, priced fair, and delivered free. No file? Our designers bring your vision to life.</p>
+      <div class="hero-cta">
+        <a class="btn btn-coral btn-lg" href="#quote">Get an instant quote</a>
+        <a class="btn btn-ghost btn-lg" href="#design">Talk to a designer</a>
+      </div>
+      <div class="trust" aria-label="Why customers choose us">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>Most orders in 1–2 days</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.5 5 3 5 1.1 5 3-2.2 3-5 3-5-1.1-5-3"/></svg>Wholesale-level pricing</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></svg>In-house graphic design</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Free GTA delivery</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="sticker s1">Grand Opening<br>Banner 8′ × 4′</div>
+      <div class="sticker s2">500 business cards<br>$39</div>
+      <div class="sticker s3">Lawn signs<br>from $12</div>
+      <div class="sticker s4"><div><span>Ready in</span>24 hrs</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTANT QUOTE -->
+<section class="quote band" id="quote">
+  <div class="wrap">
+    <div class="quote-head">
+      <p class="eyebrow">Instant quote</p>
+      <h2 style="margin-top:.6rem">Price it in seconds. See how big it really is.</h2>
+      <p>Pick a product, set a size, drop in your artwork. We'll show it next to a 5′5″ person so you know exactly what you're ordering.</p>
+    </div>
+    <form class="qgrid" id="qform" novalidate>
+      <div class="panel">
+        <div class="field">
+          <label for="product">What are you printing?</label>
+          <select id="product"></select>
+        </div>
+        <div class="presets" id="presets" aria-label="Popular sizes"></div>
+        <div class="row three">
+          <div class="field"><label for="w">Width</label><input id="w" type="number" min="1" step="1" value="72" inputmode="decimal"></div>
+          <div class="field"><label for="h">Height</label><input id="h" type="number" min="1" step="1" value="36" inputmode="decimal"></div>
+          <div class="field"><label for="unit">Unit</label><select id="unit"><option value="in">inches</option><option value="ft">feet</option><option value="cm">cm</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="qty">Quantity</label><input id="qty" type="number" min="1" step="1" value="1" inputmode="numeric"></div>
+          <div class="field"><label>Turnaround</label>
+            <div class="toggle" role="group" aria-label="Turnaround">
+              <button type="button" id="t-std" aria-pressed="true">Standard · 2–3 days</button>
+              <button type="button" id="t-rush" aria-pressed="false">Rush · 24 hrs</button>
+            </div>
+          </div>
+        </div>
+        <div class="checks" id="opts"></div>
+        <label class="drop" id="drop">
+          <input type="file" id="file" accept="image/*,.pdf,.ai,.eps,.svg">
+          <strong>Drop your artwork here</strong>
+          <small>PDF, PNG, JPG, AI, EPS or SVG · we check the resolution for you</small>
+        </label>
+        <div class="filecheck" id="filecheck" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="panel">
+        <div class="preview">
+          <svg id="scene" viewBox="0 0 600 340" role="img" aria-labelledby="scene-title"><title id="scene-title">Size preview next to a person</title></svg>
+        </div>
+        <div class="compare" role="group" aria-label="Compare against">
+          <button type="button" class="preset" data-cmp="person" aria-pressed="true">5′5″ person</button>
+          <button type="button" class="preset" data-cmp="door" aria-pressed="false">Front door</button>
+          <button type="button" class="preset" data-cmp="car" aria-pressed="false">Sedan</button>
+        </div>
+        <p class="preview-cap" id="cap"></p>
+        <div class="price">
+          <div>
+            <div class="amt" id="total">$0<small> CAD</small></div>
+            <div class="meta" id="each"></div>
+          </div>
+          <div class="meta" id="eta"></div>
+        </div>
+        <div class="breakdown" id="breakdown"></div>
+        <div class="quote-actions">
+          <button class="btn btn-coral" type="submit">Lock in this price</button>
+          <button class="btn btn-ghost" type="button" id="email-btn">Email me this quote</button>
+        </div>
+        <div class="sent" id="sent">Got it. A real person will confirm your quote within the hour (usually faster).</div>
+        <p class="fineprint">Prices are estimates before tax. Final quote confirmed by a human before anything prints. Free delivery on orders over $50 in the GTA.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- PRINTER SCROLL SCENE -->
+<section class="print-scene" id="how-scene" aria-label="What we print">
+  <div class="print-sticky wrap">
+    <div class="print-copy">
+      <p class="eyebrow">Hot off the press</p>
+      <h2>Everything your business needs to be seen.</h2>
+      <p>Keep scrolling and watch it print. From a single lawn sign to a thousand flyers, it all comes out of our Brampton studio.</p>
+      <ul class="print-steps" id="psteps">
+        <li data-step="0"><i>1</i> Vinyl banners &amp; backdrops</li>
+        <li data-step="1"><i>2</i> Business cards &amp; stationery</li>
+        <li data-step="2"><i>3</i> Stickers, labels &amp; decals</li>
+      </ul>
+    </div>
+    <div class="printer" id="printer">
+      <div class="sheet c" data-i="2"><div class="deco" style="background:radial-gradient(circle at 20% 30%,#fff 0 12%,transparent 13%),radial-gradient(circle at 80% 70%,#fff 0 18%,transparent 19%)"></div><div><h3>Stickers that stick around.</h3><p>Die-cut · kiss-cut · roll labels</p></div></div>
+      <div class="sheet b" data-i="1"><div><h3>Business cards from $39</h3><p>500 · 16pt · matte or gloss</p></div></div>
+      <div class="sheet a" data-i="0"><div class="deco" style="background:repeating-linear-gradient(135deg,transparent 0 18px,#fff 18px 20px)"></div><div><h3>Grand opening? Say it big.</h3><p>Banners from $3.75 / sq ft</p></div></div>
+      <div class="tray"></div>
+      <div class="machine"></div>
+      <div class="label">Btown · PS-1</div>
+      <div class="light" id="plight"></div>
+    </div>
+    <div class="scroll-hint" id="hint">Scroll to print ↓</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services band" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Services</p><h2 style="margin-top:.5rem">Printing for businesses, events and creators.</h2></div>
+      <p>Honest pricing, quick turnaround, and a designer on standby if you need one. Every product below can be quoted instantly above.</p>
+    </div>
+    <div class="cards">
+      <a class="card c-coral" href="#quote"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h36v20H6z"/><path d="M6 12 3 8M42 12l3-4M6 32l-3 4M42 32l3 4"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/><circle cx="36" cy="16" r="1.5" fill="currentColor"/></svg><div><h3>Banners &amp; backdrops</h3><p>13oz vinyl, mesh and fabric. Hems and grommets included.</p></div><span class="from">From $3.75 / sq ft</span></a>
+      <a class="card c-lime" href="#quote"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h32v22H8z"/><path d="M16 30v12M32 30v12"/><path d="M14 16h20M14 22h12"/></svg><div><h3>Lawn &amp; coroplast signs</h3><p>Real estate, elections, open houses. H-stakes available.</p></div><span class="from">From $12 each</span></a>
+      <a class="card c-cream" href="#quote"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="36" height="24" rx="3"/><path d="M12 20h12M12 26h8"/><circle cx="34" cy="24" r="4"/></svg><div><h3>Business cards</h3><p>16pt stock, matte, gloss, soft-touch or rounded corners.</p></div><span class="from">500 for $39</span></a>
+      <a class="card c-teal" href="#quote"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 8c-6 6-6 26 0 32M24 8c6 6 6 26 0 32M8 24h32"/></svg><div><h3>Stickers &amp; labels</h3><p>Die-cut, kiss-cut, roll labels, waterproof vinyl.</p></div><span class="from">From $0.08 each</span></a>
+      <a class="card c-peach" href="#quote"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h20l8 8v28H10z"/><path d="M30 6v8h8M16 22h16M16 28h16M16 34h10"/></svg><div><h3>Flyers &amp; marketing</h3><p>Flyers, postcards, menus, brochures, door hangers.</p></div><span class="from">1,000 flyers from $89</span></a>
+      <a class="card c-salmon" href="#design"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8l10 10L18 40H8V30z"/><path d="M26 12l10 10"/></svg><div><h3>Graphic design</h3><p>Logos, layouts and print-ready files from our in-house team.</p></div><span class="from">From $49</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why band">
+  <div class="wrap">
+    <p class="eyebrow">Why Btown</p>
+    <h2 style="margin-top:.5rem;max-width:30rem">Big-shop quality. Small-shop prices. Brampton speed.</h2>
+    <div class="pillars">
+      <div class="pillar"><div class="big">Up to 40%</div><h3>less than the big-box chains</h3><p>We run our own presses in Brampton, so there's no middleman markup. Compare any quote and we'll match or beat it.</p></div>
+      <div class="pillar"><div class="big">24 hrs</div><h3>rush turnaround when you need it</h3><p>Standard orders ship in 2–3 business days. Need it tomorrow? Pick Rush at checkout and we'll make it happen.</p></div>
+      <div class="pillar"><div class="big">Real humans</div><h3>who design and proof your work</h3><p>Every file is checked by a person before it prints. No file at all? Our designers will build one with you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section class="design band" id="design">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Graphic design services</p>
+      <h2 style="margin-top:.5rem">Have the vision? We'll bring it to life.</h2>
+      <p style="margin-top:1rem;font-size:1.1rem;color:var(--ink-soft)">Sketch it on a napkin, describe it in a text, or send us an Instagram post you love. Our designers turn it into a print-ready file, and you approve a proof before anything prints.</p>
+      <ul>
+        <li>Logo design and brand refresh from $149</li>
+        <li>Flyer, menu, sign and banner layouts from $49</li>
+        <li>Fix-my-file service: resolution, bleed and colour corrections for $19</li>
+        <li>Unlimited revisions on design packages. Two rounds on single pieces.</li>
+      </ul>
+      <div class="hero-cta"><a class="btn btn-ink" href="#quote">Start with a quote</a><a class="btn btn-ghost" href="mailto:hello@btownprintstudio.com">Email a designer</a></div>
+    </div>
+    <div class="before-after" aria-hidden="true">
+      <div class="ba napkin"><span class="tag">What you send</span><div style="font-size:1.2rem">"grand opening sale… 50% off… make it pop?? peachy colours"</div><span class="tag">napkin.jpg</span></div>
+      <div class="ba final"><span class="tag">What we print</span><div class="t">Grand<br>Opening<br>50% off</div><span class="tag">Banner · 8′ × 4′</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process band" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">How it works</p><h2 style="margin-top:.5rem">From idea to doorstep in four steps.</h2></div>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Quote it instantly</h3><p>Pick your product and size above. See the price and the real-world scale before you commit.</p></div>
+      <div class="step"><h3>Upload or get designed</h3><p>Drop in your file or book a designer. We check resolution, bleed and colour on every job.</p></div>
+      <div class="step"><h3>Approve your proof</h3><p>You get a digital proof within hours. Nothing prints until you say so.</p></div>
+      <div class="step"><h3>Pick up or free delivery</h3><p>Grab it in Brampton or we deliver anywhere in the GTA at no charge.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews band">
+  <div class="wrap">
+    <p class="eyebrow">Loved across the GTA</p>
+    <h2 style="margin-top:.5rem">Rated 4.9 by businesses like yours.</h2>
+    <div class="rev-grid">
+      <article class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Ordered a 10-foot banner at 4pm, had it at my restaurant in Mississauga the next morning. Cheaper than the quote I got in Toronto, too."</p><footer>Priya S.<span>Restaurant owner, Mississauga</span></footer></article>
+      <article class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>"I had no logo and no clue. Their designer built the whole thing from my voice notes and the lawn signs look incredible."</p><footer>Marcus T.<span>Landscaping, Brampton</span></footer></article>
+      <article class="rev"><div class="stars" aria-label="5 stars">★★★★★</div><p>"The size preview saved me. I almost ordered a sign half the size I needed. Stickers for our market stall were perfect."</p><footer>Jade &amp; Omar<span>Small-batch candles, Vaughan</span></footer></article>
+    </div>
+    <p class="fineprint" style="margin-top:1rem">Sample testimonials for demo purposes.</p>
+  </div>
+</section>
+
+<!-- AREA + FAQ -->
+<section class="area band" id="faq">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Service area</p>
+      <h2 style="margin-top:.5rem">Printed in Brampton. Delivered across the GTA. Free.</h2>
+      <p style="margin-top:1rem;color:var(--ink-soft)">Our studio is in Brampton, Ontario, and our delivery van covers the whole Greater Toronto Area at no charge on orders over $50. Local pickup is always free.</p>
+      <div class="cities">
+        <span>Brampton</span><span>Mississauga</span><span>Toronto</span><span>Vaughan</span><span>Caledon</span><span>Oakville</span><span>Milton</span><span>Markham</span><span>Richmond Hill</span><span>Etobicoke</span><span>Scarborough</span><span>Georgetown</span>
+      </div>
+    </div>
+    <div class="faq">
+      <p class="eyebrow">Questions</p>
+      <details open><summary>How fast can you print my order?</summary><p>Most orders are ready in 2–3 business days. Rush service gets banners, signs, flyers and stickers done in 24 hours. Business cards and specialty finishes may need an extra day.</p></details>
+      <details><summary>Is delivery really free?</summary><p>Yes. Orders over $50 are delivered free anywhere in the GTA, from Oakville to Scarborough. Smaller orders can be picked up in Brampton or delivered for a flat $8.</p></details>
+      <details><summary>What file types do you accept?</summary><p>PDF is best. We also take AI, EPS, SVG, PNG, JPG and TIFF. Aim for 150 DPI at final size for large format and 300 DPI for cards and flyers. Not sure? Upload it and our checker will tell you.</p></details>
+      <details><summary>I don't have a design. Can you make one?</summary><p>Absolutely. Our in-house designers create logos, layouts and full campaigns. Single-piece layouts start at $49 and you approve a proof before we print.</p></details>
+      <details><summary>Do you price-match?</summary><p>Send us any written quote from a GTA print shop and we'll match or beat it on comparable specs.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta band">
+  <div class="wrap">
+    <h2>Ready when you are. Usually in 24 hours.</h2>
+    <p>Get a price in seconds, upload your art, and let Brampton's most reliable print shop handle the rest.</p>
+    <div class="hero-cta"><a class="btn btn-ink btn-lg" href="#quote">Get an instant quote</a><a class="btn btn-ghost btn-lg" href="#design">Book a designer</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#home" style="color:var(--white)"><span class="logo-mark">B</span><span class="logo-word">Btown Print Studio<small style="color:var(--lime)">Design · Print · Deliver</small></span></a>
+      <p style="margin-top:1rem;max-width:22rem;opacity:.85">Smart, reliable printing for businesses, events and creators across Brampton and the Greater Toronto Area.</p>
+      <p style="margin-top:.8rem;font-weight:700">hello@btownprintstudio.com</p>
+    </div>
+    <div><h4>Shop</h4><ul><li><a href="#quote">Banners &amp; signs</a></li><li><a href="#quote">Business cards</a></li><li><a href="#quote">Stickers &amp; labels</a></li><li><a href="#quote">Flyers &amp; marketing</a></li></ul></div>
+    <div><h4>Help</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#how">Artwork guide</a></li><li><a href="#how">Track an order</a></li><li><a href="#design">Design studio</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="https://www.instagram.com/btownprintstudio/" target="_blank" rel="noopener">Instagram @btownprintstudio</a></li><li><a href="#home">Brampton, Ontario</a></li></ul></div>
+    <p class="copy">© 2026 Btown Print Studio · Brampton, ON · Privacy · Terms · Accessibility</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  // ---------- Sample pricing (per sq ft unless noted). Replace with real rates. ----------
+  const PRODUCTS = {
+    banner:   {name:"Vinyl banner (13oz)",      rate:3.75, min:29,  opts:["grommets","hems","double","polepockets"], presets:[[72,36,"6′ × 3′"],[96,48,"8′ × 4′"],[120,36,"10′ × 3′"],[48,24,"4′ × 2′"]]},
+    coroplast:{name:"Coroplast / lawn sign",    rate:5.5,  min:12,  opts:["double","hstake","rounded"],              presets:[[24,18,"24″ × 18″"],[18,12,"18″ × 12″"],[36,24,"36″ × 24″"],[48,24,"48″ × 24″"]]},
+    foam:     {name:"Foam board sign",          rate:7.5,  min:19,  opts:["double","lam","easel"],                   presets:[[24,36,"24″ × 36″"],[18,24,"18″ × 24″"],[36,48,"36″ × 48″"]]},
+    poster:   {name:"Poster (satin photo paper)",rate:3.25, min:9,  opts:["lam","mount"],                            presets:[[18,24,"18″ × 24″"],[24,36,"24″ × 36″"],[36,48,"36″ × 48″"],[11,17,"11″ × 17″"]]},
+    decal:    {name:"Window / wall decal",      rate:6.75, min:15,  opts:["lam","contourcut","reverse"],             presets:[[24,24,"24″ × 24″"],[48,36,"48″ × 36″"],[12,12,"12″ × 12″"]]},
+    backdrop: {name:"Step & repeat backdrop",   rate:4.5,  min:79,  opts:["grommets","polepockets","stand"],         presets:[[96,96,"8′ × 8′"],[120,96,"10′ × 8′"],[96,72,"8′ × 6′"]]}
+  };
+  const OPTS = {
+    grommets:{label:"Grommets every 2 ft", calc:(a,p)=>Math.ceil(p/24)*0.35},
+    hems:{label:"Welded hems", calc:(a,p)=>p/12*0.6},
+    double:{label:"Print both sides", calc:(a,p,base)=>base*0.8},
+    polepockets:{label:"Pole pockets", calc:(a,p)=>6},
+    hstake:{label:"H-stakes", calc:()=>2.25},
+    rounded:{label:"Rounded corners", calc:()=>1},
+    lam:{label:"Matte lamination", calc:(a)=>a*1.5},
+    easel:{label:"Easel back", calc:()=>4},
+    mount:{label:"Mount on foam", calc:(a)=>a*4},
+    contourcut:{label:"Contour cut to shape", calc:(a)=>Math.max(5,a*1.25)},
+    reverse:{label:"Reverse print (inside glass)", calc:(a)=>a*0.5},
+    stand:{label:"Telescopic stand", calc:()=>149}
+  };
+  const COMPARE = {
+    person:{label:"a 5′5″ person", h:66, w:22},
+    door:{label:"a standard front door", h:80, w:36},
+    car:{label:"a mid-size sedan", h:58, w:186}
+  };
+  const $ = id=>document.getElementById(id);
+  const productEl=$("product"), presetsEl=$("presets"), optsEl=$("opts"), wEl=$("w"), hEl=$("h"), unitEl=$("unit"), qtyEl=$("qty");
+  let rush=false, cmp="person", artURL=null, artDims=null, state={opts:{}};
+
+  // Build product list
+  Object.entries(PRODUCTS).forEach(([k,v])=>{const o=document.createElement("option");o.value=k;o.textContent=v.name;productEl.appendChild(o);});
+
+  function toInches(v){const u=unitEl.value;return u==="ft"?v*12:u==="cm"?v/2.54:v;}
+  function fmt(n){return "$"+n.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function fmtIn(inch){ if(inch>=24 && inch%12===0) return (inch/12)+"′"; if(inch>=24){const f=Math.floor(inch/12),i=Math.round(inch%12);return f+"′"+(i?" "+i+"″":"");} return Math.round(inch)+"″"; }
+
+  function buildOpts(){
+    const p=PRODUCTS[productEl.value]; optsEl.innerHTML=""; state.opts={};
+    p.opts.forEach(k=>{
+      const l=document.createElement("label"); l.className="check";
+      const c=document.createElement("input"); c.type="checkbox"; c.id="opt-"+k; c.addEventListener("change",()=>{state.opts[k]=c.checked;update();});
+      l.appendChild(c); l.appendChild(document.createTextNode(OPTS[k].label)); optsEl.appendChild(l);
+    });
+    presetsEl.innerHTML="";
+    p.presets.forEach(([pw,ph,lab])=>{
+      const b=document.createElement("button"); b.type="button"; b.className="preset"; b.textContent=lab; b.setAttribute("aria-pressed","false");
+      b.addEventListener("click",()=>{unitEl.value="in";wEl.value=pw;hEl.value=ph;update();});
+      presetsEl.appendChild(b);
+    });
+  }
+
+  function update(){
+    const p=PRODUCTS[productEl.value];
+    const win=Math.max(1,toInches(parseFloat(wEl.value)||0)), hin=Math.max(1,toInches(parseFloat(hEl.value)||0));
+    const qty=Math.max(1,parseInt(qtyEl.value)||1);
+    const area=(win*hin)/144, perim=2*(win+hin);
+    const base=Math.max(p.min, area*p.rate);
+    let extras=0, lines=[];
+    Object.keys(state.opts).forEach(k=>{ if(state.opts[k]){const c=OPTS[k].calc(area,perim,base); extras+=c; lines.push(OPTS[k].label+" "+fmt(c));} });
+    let each=base+extras;
+    const disc=qty>=25?0.2:qty>=10?0.15:qty>=5?0.1:qty>=2?0.05:0;
+    each=each*(1-disc);
+    if(rush) each*=1.35;
+    const total=each*qty;
+    $("total").innerHTML=fmt(total)+"<small> CAD</small>";
+    $("each").textContent=qty>1?fmt(each)+" each × "+qty+(disc?" · "+Math.round(disc*100)+"% volume discount":""):(area.toFixed(1)+" sq ft · "+fmt(p.rate)+"/sq ft"+(base===p.min?" · minimum applied":""));
+    $("eta").innerHTML=rush?"<b>Ready tomorrow</b><br>Rush +35%":"<b>Ready in 2–3 days</b><br>Free GTA delivery";
+    $("breakdown").innerHTML=["<span>Base <b>"+fmt(base)+"</b></span>"].concat(lines.map(l=>"<span>"+l+"</span>")).join("");
+    // mark preset
+    presetsEl.querySelectorAll(".preset").forEach(b=>{const m=p.presets.find(x=>x[2]===b.textContent);b.setAttribute("aria-pressed",String(unitEl.value==="in"&&m&&+wEl.value===m[0]&&+hEl.value===m[1]));});
+    drawScene(win,hin);
+    checkDPI(win,hin);
+  }
+
+  // ---------- Scene ----------
+  function drawScene(win,hin){
+    const svg=$("scene"); const W=600,H=340, pad=28, floor=H-40;
+    const ref=COMPARE[cmp];
+    const totalW=win+ref.w+30, maxH=Math.max(hin,ref.h);
+    const s=Math.min((W-pad*2)/totalW,(floor-pad-30)/maxH);
+    const signW=win*s, signH=hin*s, refW=ref.w*s, refH=ref.h*s;
+    const gap=30*s; const startX=(W-(signW+gap+refW))/2;
+    const sx=startX, sy=floor-signH, rx=startX+signW+gap, ry=floor-refH;
+    let g="";
+    g+=`<rect x="0" y="${floor}" width="${W}" height="${H-floor}" fill="#E9D6A3"/>`;
+    g+=`<line x1="0" y1="${floor}" x2="${W}" y2="${floor}" stroke="#2E2622" stroke-width="2" opacity=".2"/>`;
+    // sign
+    g+=`<defs><clipPath id="cp"><rect x="${sx}" y="${sy}" width="${signW}" height="${signH}" rx="3"/></clipPath><pattern id="pat" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F8CFBE"/><circle cx="7" cy="7" r="2" fill="#E8674A" opacity=".6"/></pattern></defs>`;
+    g+=`<rect x="${sx+4}" y="${sy+6}" width="${signW}" height="${signH}" rx="3" fill="#2E2622" opacity=".15"/>`;
+    if(artURL){ g+=`<image href="${artURL}" x="${sx}" y="${sy}" width="${signW}" height="${signH}" preserveAspectRatio="xMidYMid slice" clip-path="url(#cp)"/>`; }
+    else { g+=`<rect x="${sx}" y="${sy}" width="${signW}" height="${signH}" rx="3" fill="url(#pat)"/>`;
+      if(signW>70&&signH>26){ const fs=Math.min(20,signW/9,signH/2.2); g+=`<text x="${sx+signW/2}" y="${sy+signH/2+fs*.35}" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="${fs}" fill="#D2503A">Your artwork</text>`; } }
+    g+=`<rect x="${sx}" y="${sy}" width="${signW}" height="${signH}" rx="3" fill="none" stroke="#2E2622" stroke-width="2"/>`;
+    // dims
+    g+=`<text x="${sx+signW/2}" y="${sy-8}" text-anchor="middle" font-family="Figtree,sans-serif" font-weight="700" font-size="13" fill="#2E2622">${fmtIn(win)} wide</text>`;
+    g+=`<text transform="translate(${sx-8} ${sy+signH/2}) rotate(-90)" text-anchor="middle" font-family="Figtree,sans-serif" font-weight="700" font-size="13" fill="#2E2622">${fmtIn(hin)} tall</text>`;
+    // reference
+    if(cmp==="person"){ const cx=rx+refW/2, headR=refW*.22;
+      g+=`<g fill="#2B9C79"><circle cx="${cx}" cy="${ry+headR}" r="${headR}"/><rect x="${cx-refW*.3}" y="${ry+headR*2+2}" width="${refW*.6}" height="${refH*.38}" rx="${refW*.15}"/><rect x="${cx-refW*.3}" y="${ry+headR*2+refH*.38}" width="${refW*.26}" height="${refH*.4}" rx="4"/><rect x="${cx+refW*.04}" y="${ry+headR*2+refH*.38}" width="${refW*.26}" height="${refH*.4}" rx="4"/><rect x="${cx-refW*.5}" y="${ry+headR*2+4}" width="${refW*.16}" height="${refH*.32}" rx="4"/><rect x="${cx+refW*.34}" y="${ry+headR*2+4}" width="${refW*.16}" height="${refH*.32}" rx="4"/></g>`;
+    } else if(cmp==="door"){
+      g+=`<rect x="${rx}" y="${ry}" width="${refW}" height="${refH}" rx="2" fill="#2B9C79"/><rect x="${rx+refW*.15}" y="${ry+refH*.08}" width="${refW*.7}" height="${refH*.35}" rx="2" fill="#1F7A5E"/><rect x="${rx+refW*.15}" y="${ry+refH*.5}" width="${refW*.7}" height="${refH*.42}" rx="2" fill="#1F7A5E"/><circle cx="${rx+refW*.82}" cy="${ry+refH*.5}" r="${Math.max(2,refW*.05)}" fill="#FBE6B4"/>`;
+    } else {
+      const bh=refH*.55; g+=`<g fill="#2B9C79"><rect x="${rx}" y="${ry+refH-bh-refH*.12}" width="${refW}" height="${bh}" rx="${bh*.3}"/><path d="M${rx+refW*.2} ${ry+refH-bh-refH*.12} L${rx+refW*.33} ${ry} L${rx+refW*.7} ${ry} L${rx+refW*.82} ${ry+refH-bh-refH*.12}Z"/><circle cx="${rx+refW*.22}" cy="${ry+refH-refH*.1}" r="${refH*.11}" fill="#2E2622"/><circle cx="${rx+refW*.78}" cy="${ry+refH-refH*.1}" r="${refH*.11}" fill="#2E2622"/></g>`;
+    }
+    g+=`<text x="${rx+refW/2}" y="${floor+26}" text-anchor="middle" font-family="Figtree,sans-serif" font-weight="700" font-size="12" fill="#5C4F48">${ref.label.replace(/^a /,"")} · ${fmtIn(ref.h)}</text>`;
+    svg.innerHTML=`<title>Size preview next to ${ref.label}</title>`+g;
+    const ratio=hin/ref.h; const pct=Math.round(ratio*100);
+    let phrase;
+    if(cmp==="car") phrase=win>ref.w? "wider than "+ref.label : "about "+Math.round(win/ref.w*100)+"% as long as "+ref.label;
+    else phrase = pct>=97&&pct<=103 ? "about as tall as "+ref.label : pct>103 ? ratio.toFixed(1)+"× taller than "+ref.label : "about "+pct+"% the height of "+ref.label;
+    $("cap").innerHTML="Your <b>"+fmtIn(win)+" × "+fmtIn(hin)+"</b> "+PRODUCTS[productEl.value].name.split(" (")[0].toLowerCase()+" is "+phrase+".";
+  }
+
+  // ---------- Artwork upload + DPI check ----------
+  const fileEl=$("file"), drop=$("drop"), fc=$("filecheck");
+  function checkDPI(win,hin){
+    if(!artDims){ if(fc.dataset.name) fc.className="filecheck ok", fc.textContent="✓ "+fc.dataset.name+" attached. We'll check it by hand before printing."; return; }
+    const dpi=Math.min(artDims.w/win,artDims.h/hin);
+    if(dpi>=100){fc.className="filecheck ok";fc.textContent="✓ Looks sharp: "+Math.round(dpi)+" DPI at this size. Print-ready.";}
+    else if(dpi>=60){fc.className="filecheck warn";fc.textContent="△ "+Math.round(dpi)+" DPI at this size. Fine for banners viewed from a distance; we'll double-check it.";}
+    else {fc.className="filecheck warn";fc.textContent="△ Only "+Math.round(dpi)+" DPI at this size. It may print soft. Our Fix-my-file service ($19) can help.";}
+  }
+  function handleFile(f){
+    if(!f) return; fc.dataset.name=f.name; artDims=null; artURL=null;
+    if(f.type.startsWith("image/")){ const r=new FileReader(); r.onload=e=>{ const im=new Image(); im.onload=()=>{artDims={w:im.naturalWidth,h:im.naturalHeight}; artURL=e.target.result; update();}; im.src=e.target.result; }; r.readAsDataURL(f); }
+    else { update(); }
+    drop.querySelector("strong").textContent=f.name; drop.querySelector("small").textContent="Click to replace";
+  }
+  fileEl.addEventListener("change",()=>handleFile(fileEl.files[0]));
+  ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over");}));
+  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("over");}));
+  drop.addEventListener("drop",e=>handleFile(e.dataTransfer.files[0]));
+
+  // ---------- Controls ----------
+  productEl.addEventListener("change",()=>{buildOpts();const p=PRODUCTS[productEl.value];unitEl.value="in";wEl.value=p.presets[0][0];hEl.value=p.presets[0][1];update();});
+  [wEl,hEl,unitEl,qtyEl].forEach(el=>el.addEventListener("input",update));
+  $("t-std").addEventListener("click",()=>{rush=false;$("t-std").setAttribute("aria-pressed","true");$("t-rush").setAttribute("aria-pressed","false");update();});
+  $("t-rush").addEventListener("click",()=>{rush=true;$("t-rush").setAttribute("aria-pressed","true");$("t-std").setAttribute("aria-pressed","false");update();});
+  document.querySelectorAll("[data-cmp]").forEach(b=>b.addEventListener("click",()=>{cmp=b.dataset.cmp;document.querySelectorAll("[data-cmp]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));update();}));
+  $("qform").addEventListener("submit",e=>{e.preventDefault();$("sent").style.display="block";});
+  $("email-btn").addEventListener("click",()=>{$("sent").style.display="block";$("sent").textContent="Quote saved. In the live site this emails a PDF quote and opens a checkout link.";});
+  buildOpts(); update();
+
+  // ---------- Scroll-driven printer ----------
+  const scene=$("how-scene"), sheets=[...document.querySelectorAll(".sheet")], steps=[...document.querySelectorAll("#psteps li")], light=$("plight"), hint=$("hint");
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+  function render(){
+    if(reduce) return;
+    const r=scene.getBoundingClientRect(); const total=r.height-window.innerHeight;
+    const p=clamp(-r.top/total,0,1);
+    // three sheets, each occupies a third of progress: 0.08-0.36, 0.36-0.64, 0.64-0.92
+    let busy=false;
+    sheets.forEach(sh=>{
+      const i=+sh.dataset.i; const a=0.06+i*0.3, b=a+0.24;
+      const t=clamp((p-a)/(b-a),0,1); const e=ease(t);
+      // emerges from slot: starts hidden above printer (clip), moves down into tray and then settles stacked
+      const emerge=clamp(t/0.7,0,1), settle=clamp((t-0.7)/0.3,0,1);
+      const y = -8 + emerge*118 + settle*(14*i); // percent of sheet height
+      const rot = settle*((i-1)*4);
+      sh.style.transform=`translateY(${y}%) rotate(${rot}deg)`;
+      sh.style.clipPath=`inset(${(1-emerge)*100}% 0 0 0)`;
+      sh.style.zIndex = t>0 ? 2+i : 0;
+      sh.style.opacity = t>0?1:0;
+      if(t>0&&t<1) busy=true;
+      steps[i].classList.toggle("on", t>0.3);
+    });
+    light.classList.toggle("busy",busy);
+    hint.style.opacity = p>0.05?0:1;
+  }
+  if(!reduce){ let ticking=false; const onScroll=()=>{ if(!ticking){ requestAnimationFrame(()=>{render();ticking=false;}); ticking=true; } }; window.addEventListener("scroll",onScroll,{passive:true}); window.addEventListener("resize",onScroll); render(); }
+  else { sheets.forEach(sh=>{sh.style.transform="none";sh.style.clipPath="none";sh.style.opacity=1;}); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Netlify config for the B-Town Print Studio sample site.
+# Deploy from the repo root:
+#   netlify sites:create --name btownprintstudio      # once, gives https://btownprintstudio.netlify.app
+#   netlify deploy --dir btown-print-studio --prod    # every update
+[build]
+  publish = "btown-print-studio"
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -78,46 +78,44 @@ p{margin:0}
 @media(max-width:900px){.nav-links{display:none}}
 @media(max-width:480px){.brand-name{display:none}.nav{padding-left:10px}}
 
-/* hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:150px 0 70px;overflow:hidden}
-.drape{position:absolute;top:0;left:0;width:100%;height:clamp(140px,22vw,300px);filter:drop-shadow(0 18px 28px rgba(238,106,77,.18))}
-.hero::after{content:"";position:absolute;right:-15vw;bottom:-25vw;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,rgba(203,214,127,.35),rgba(238,106,77,.12) 45%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 28px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+/* hero: one big headline, then the printer at nearly full width, printing real signs */
+.hero{position:relative;padding:150px 0 40px;overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;left:50%;top:38%;width:120vw;height:120vw;max-width:1500px;max-height:1500px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(251,208,190,.55),rgba(203,214,127,.18) 55%,transparent 72%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 28px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
 .live-dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 0 rgba(238,106,77,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(238,106,77,0)}100%{box-shadow:0 0 0 0 rgba(238,106,77,0)}}
-.hero-title{font-family:var(--serif);font-size:clamp(42px,5.4vw,78px);line-height:1;letter-spacing:-.025em;margin:22px 0 26px;max-width:14ch}
+.hero-title{font-family:var(--serif);font-size:clamp(52px,9vw,136px);line-height:.95;letter-spacing:-.03em;margin:22px auto 0;max-width:12ch}
 .hero-title em{font-style:italic}
-.hero-sub{font-size:clamp(17px,1.6vw,21px);max-width:46ch;color:var(--ink-soft)}
+.hero-sub{font-size:clamp(18px,1.7vw,23px);max-width:48ch;color:var(--ink-soft);margin:26px auto 0}
 .hero-sub strong{color:var(--ink);font-weight:600}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.hero-note{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;justify-content:center}
+.hero-note{margin-top:14px;font-size:14px;color:var(--ink-soft)}
 .hero-note::before{content:"✦";color:var(--coral);margin-right:8px}
-.proof-bar{display:grid;grid-template-columns:repeat(3,auto);margin:52px 0 0;justify-content:start;border-top:1px solid var(--line);padding-top:26px}
-.proof-bar>div{padding-right:clamp(20px,4vw,52px);margin-right:clamp(20px,4vw,52px);border-right:1px solid var(--line)}
-.proof-bar>div:last-child{border:0;margin:0;padding:0}
-.proof-bar dt{font-family:var(--serif);font-size:clamp(38px,4.6vw,60px);line-height:1}
-.proof-bar dd{margin:8px 0 0;font-size:14px;color:var(--ink-soft);max-width:20ch}
 .load{opacity:0;transform:translateY(24px);animation:rise 1.1s var(--ease) forwards;animation-delay:calc(var(--d)*.12s + .15s)}
 @keyframes rise{to{opacity:1;transform:none}}
 
-/* hero: the printer in an arch, printing real signs */
-.hero-art{position:relative}
-.arch{aspect-ratio:3/3.9;border-radius:999px 999px 28px 28px;position:relative;overflow:hidden;background:repeating-linear-gradient(90deg,rgba(255,255,255,0) 0 18px,rgba(255,255,255,.14) 18px 21px),radial-gradient(120% 80% at 50% 0%,var(--cream),transparent 60%),linear-gradient(170deg,var(--peach),var(--coral));box-shadow:0 50px 80px -40px rgba(238,106,77,.7)}
-.scene{position:absolute;inset:0}
-.printer{position:absolute;left:50%;top:21%;transform:translateX(-50%);width:84%;height:auto;z-index:2;filter:drop-shadow(0 30px 40px rgba(43,26,21,.3))}
-.feed{position:absolute;left:50%;top:51%;width:42%;height:46%;transform:translateX(-50%);z-index:3;overflow:hidden;pointer-events:none}
-.print{position:absolute;left:0;right:0;top:0;height:88%;display:flex;justify-content:center;align-items:flex-start;opacity:0;will-change:transform}
+/* the printer scene */
+.hero-art{position:relative;width:min(100%,1120px);margin:56px auto 0;padding:0 28px}
+.scene{position:relative;width:100%;aspect-ratio:540/540}
+.printer{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100%;height:auto;z-index:2;filter:drop-shadow(0 40px 60px rgba(43,26,21,.28))}
+.feed{position:absolute;left:50%;top:35.7%;width:40%;height:66%;transform:translateX(-50%);z-index:3;overflow:hidden;pointer-events:none}
+.print{position:absolute;left:0;right:0;top:0;height:84%;display:flex;justify-content:center;align-items:flex-start;opacity:0;will-change:transform}
 .print img{width:100%;height:100%;object-fit:contain;object-position:top;filter:drop-shadow(0 18px 24px rgba(43,26,21,.3))}
-.print[data-label="Acrylic monograms"] img{padding:8% 12% 0}
-.arch-label{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:4;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,246,238,.92);padding:6px 12px;border-radius:999px;white-space:nowrap;transition:opacity .3s,transform .3s}
+.print[data-label="Acrylic monograms"] img{padding:6% 10% 0}
+.arch-label{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);z-index:4;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:999px;white-space:nowrap;transition:opacity .3s,transform .3s}
 .arch-label.hide{opacity:0;transform:translate(-50%,6px)}
-.badge{position:absolute;background:var(--paper);border-radius:18px;padding:14px 18px;display:flex;flex-direction:column;box-shadow:0 20px 40px -20px rgba(43,26,21,.4);animation:bob 6s ease-in-out infinite;z-index:5}
-.badge b{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1}
-.badge span{font-size:12px;color:var(--ink-soft)}
-.badge-1{left:-30px;top:30%}.badge-2{right:-20px;bottom:14%;animation-delay:-3s}.badge-2 b{color:var(--coral)}
+.bubble{position:absolute;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;background:var(--paper);border:1px solid rgba(43,26,21,.08);border-radius:999px;box-shadow:0 20px 40px -20px rgba(43,26,21,.4);animation:bob 6s ease-in-out infinite;white-space:nowrap;text-align:left}
+.bubble i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:18px;flex:none}
+.bubble b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;line-height:1}
+.bubble span{display:block;font-size:12px;color:var(--ink-soft);margin-top:2px}
+.b1{left:0;top:14%;animation-delay:-1s}.b1 i{background:var(--cream)}
+.b2{right:0;top:9%;animation-delay:-3s}.b2 i{background:var(--lime-pale)}
+.b3{left:2%;top:58%;animation-delay:-2s}.b3 i{background:var(--blush)}
+.b4{right:1%;top:52%;animation-delay:-4.5s}.b4 i{background:var(--lime-pale)}
+.b5{right:12%;top:84%;animation-delay:-2.5s}.b5 i{background:var(--cream)}
 @keyframes bob{50%{transform:translateY(-10px)}}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-art{max-width:420px;margin:0 auto}.badge-1{left:-6px}.badge-2{right:-6px}.proof-bar{grid-template-columns:1fr 1fr 1fr}.proof-bar>div{padding-right:12px;margin-right:12px}}
+@media(max-width:900px){.hero{padding-top:120px}.hero-art{margin-top:36px;padding:0}.scene{width:118%;margin-left:-9%}.bubble{padding:8px 12px 8px 8px}.bubble i{width:30px;height:30px;font-size:14px}.bubble b{font-size:16px}.bubble span{font-size:11px}.b1{left:2%;top:4%}.b2{right:2%;top:-2%}.b3{left:1%;top:66%}.b4{right:1%;top:60%}.b5{display:none}}
 
 /* marquee */
 .marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding:22px 0;transform:rotate(-1.2deg);margin:0 -2vw;width:104vw}
@@ -318,51 +316,33 @@ select.inp{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http
 <main id="top">
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <svg class="drape" viewBox="0 0 1440 360" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="silkA" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#EE6A4D"/><stop offset="1" stop-color="#F5A98F"/></linearGradient>
-      <linearGradient id="silkB" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FBD0BE"/><stop offset="1" stop-color="#CBD67F"/></linearGradient>
-      <linearGradient id="silkC" x1="1" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F5A98F"/><stop offset="1" stop-color="#FDE9BD"/></linearGradient>
-    </defs>
-    <path fill="url(#silkB)" opacity=".8"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M0,0 Q360,250 720,0 Q1080,250 1440,0 Z;M0,0 Q360,275 720,0 Q1080,235 1440,0 Z;M0,0 Q360,250 720,0 Q1080,250 1440,0 Z"/></path>
-    <path fill="url(#silkC)" opacity=".85"><animate attributeName="d" dur="11s" repeatCount="indefinite" values="M0,0 Q240,190 480,0 Q720,190 960,0 Q1200,190 1440,0 Z;M0,0 Q240,170 480,0 Q720,210 960,0 Q1200,175 1440,0 Z;M0,0 Q240,190 480,0 Q720,190 960,0 Q1200,190 1440,0 Z"/></path>
-    <path fill="url(#silkA)"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0,0 Q720,150 1440,0 Z;M0,0 Q720,168 1440,0 Z;M0,0 Q720,150 1440,0 Z"/></path>
-    <g fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.2"><path d="M120,0 Q720,110 1320,0"/><path d="M260,0 Q720,80 1180,0"/><path d="M420,0 Q720,50 1020,0"/></g>
-  </svg>
-
   <div class="hero-inner">
-    <div>
-      <p class="eyebrow load" style="--d:0"><span class="live-dot"></span>Brampton &amp; the GTA's go-to print shop</p>
-      <h1 class="hero-title load" style="--d:1">All your printing needs. <em class="grad-text">Big, small and everything in between.</em></h1>
-      <p class="hero-sub load" style="--d:2">One shop. <strong>Fast and affordable.</strong> Upload your artwork, pick a size, see your price in seconds and check out online. No file? Our in-house designers bring your vision to life.</p>
-      <div class="hero-ctas load" style="--d:3">
-        <a href="#quote" class="btn btn-grad">Get my instant quote</a>
-        <a href="#design" class="btn btn-ghost">I need design help →</a>
-      </div>
-      <p class="hero-note load" style="--d:3">See exactly how big your sign is next to a real person before you pay a dollar.</p>
-      <dl class="proof-bar load" style="--d:4">
-        <div><dt><span class="count" data-to="48">48</span>h</dt><dd>rush turnaround, when you need it</dd></div>
-        <div><dt>4.9<span style="font-size:.5em;vertical-align:top">★</span></dt><dd>from 300+ Google reviews</dd></div>
-        <div><dt>$0</dt><dd>setup fees, surprise fees, minimums</dd></div>
-      </dl>
+    <p class="eyebrow load" style="--d:0"><span class="live-dot"></span>Brampton &amp; the GTA's go-to print shop</p>
+    <h1 class="hero-title load" style="--d:1">We print the <em class="grad-text">big stuff.</em></h1>
+    <p class="hero-sub load" style="--d:2">Banners, backdrops, signs and seating charts for weddings, events and businesses. <strong>Upload, pick a size, see your price, check out.</strong> Done by Friday.</p>
+    <div class="hero-ctas load" style="--d:3">
+      <a href="#quote" class="btn btn-grad">Get my instant quote</a>
+      <a href="#print" class="btn btn-ghost">Shop what we print →</a>
     </div>
+    <p class="hero-note load" style="--d:3">No file? Our in-house designers bring your vision to life from $49.</p>
+  </div>
 
-    <aside class="hero-art load" style="--d:2" aria-label="Our printer printing wedding signage">
-      <div class="arch" id="scene">
-        <div class="scene">
-          <div class="feed" id="feed">
-            <div class="print" data-label="Menus"><img src="assets/menu.png" alt="Olive and burgundy wedding menu with tassel"></div>
-            <div class="print" data-label="Acrylic monograms"><img src="assets/monogram.png" alt="Gold mirror acrylic A and D monogram"></div>
-            <div class="print" data-label="Place cards"><img src="assets/placecards.png" alt="Burgundy calla lily place cards"></div>
-            <div class="print" data-label="Seating charts"><img src="assets/seating.png" alt="Pink wavy seating chart"></div>
-          </div>
-          <img class="printer" src="assets/printer.png" alt="" width="540" height="402">
-        </div>
-        <span class="arch-label" id="printLabel">Menus</span>
+  <div class="hero-art load" style="--d:4" aria-label="Our large format printer printing wedding signage">
+    <div class="scene" id="scene">
+      <div class="feed" id="feed">
+        <div class="print" data-label="Menus"><img src="assets/menu.png" alt="Olive and burgundy wedding menu with tassel"></div>
+        <div class="print" data-label="Acrylic monograms"><img src="assets/monogram.png" alt="Gold mirror acrylic A and D monogram"></div>
+        <div class="print" data-label="Place cards"><img src="assets/placecards.png" alt="Burgundy calla lily place cards"></div>
+        <div class="print" data-label="Seating charts"><img src="assets/seating.png" alt="Pink wavy seating chart"></div>
       </div>
-      <div class="badge badge-1"><b>2–3</b><span>days, standard turnaround</span></div>
-      <div class="badge badge-2"><b>$35</b><span>banners start here</span></div>
-    </aside>
+      <img class="printer" src="assets/printer.png" alt="" width="1080" height="804">
+      <span class="arch-label" id="printLabel">Menus</span>
+    </div>
+    <div class="bubble b1"><i>💸</i><div><b>Super affordable</b><span>banners from $35, no setup fees</span></div></div>
+    <div class="bubble b2"><i>⚡</i><div><b>1–2 day turnaround</b><span>48h rush on anything</span></div></div>
+    <div class="bubble b3"><i>📐</i><div><b>Print any size</b><span>from place cards to 10' backdrops</span></div></div>
+    <div class="bubble b4"><i>🪵</i><div><b>Most materials</b><span>vinyl, fabric, acrylic, foam, canvas</span></div></div>
+    <div class="bubble b5"><i>⭐</i><div><b>4.9 on Google</b><span>300+ reviews across the GTA</span></div></div>
   </div>
 </section>
 

@@ -89,12 +89,12 @@ em{font-style:normal}
 .live-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(61,110,235,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(61,110,235,0)}100%{box-shadow:0 0 0 0 rgba(61,110,235,0)}}
 .hero-title{font-family:var(--serif);font-weight:800;font-size:clamp(44px,7.4vw,112px);line-height:.98;letter-spacing:-.035em;margin:22px auto 0;max-width:14ch}
-.hero-title .rot{display:inline-block;position:relative;white-space:nowrap;vertical-align:bottom;transition:width .5s var(--ease)}
-.hero-title .rot span{display:inline-block;background:linear-gradient(transparent 60%,var(--coral) 60%,var(--coral) 94%,transparent 94%);padding:0 .1em;will-change:transform,opacity}
-.hero-title .rot span.out{animation:wout .4s var(--ease) forwards}
-.hero-title .rot span.in{animation:win .5s var(--ease) both}
-@keyframes wout{to{opacity:0;transform:translateY(-.5em) rotate(-2deg)}}
-@keyframes win{from{opacity:0;transform:translateY(.5em) rotate(2deg)}}
+.hero-title .rot{display:block;position:relative;white-space:nowrap;height:1.05em;overflow:hidden;text-align:center}
+.hero-title .rot span{position:absolute;left:50%;top:0;transform:translateX(-50%);display:inline-block;background:linear-gradient(transparent 60%,var(--coral) 60%,var(--coral) 94%,transparent 94%);padding:0 .1em;will-change:transform,opacity}
+.hero-title .rot span.out{animation:wout .55s cubic-bezier(.65,0,.35,1) forwards}
+.hero-title .rot span.in{animation:win .55s cubic-bezier(.65,0,.35,1) both}
+@keyframes wout{to{opacity:0;transform:translate(-50%,-100%)}}
+@keyframes win{from{opacity:0;transform:translate(-50%,100%)}}
 .hero-sub{font-size:clamp(18px,1.7vw,23px);max-width:48ch;color:var(--ink-soft);margin:26px auto 0}
 .hero-sub strong{color:var(--ink);font-weight:600}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;justify-content:center}
@@ -344,7 +344,7 @@ select.inp{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow load" style="--d:0"><span class="live-dot"></span>Brampton &amp; the GTA's go-to print shop</p>
+    <p class="eyebrow load" style="--d:0">Brampton &amp; the GTA's go-to print shop</p>
     <h1 class="hero-title load" style="--d:1">We print the <span class="rot" id="rot" aria-live="polite"><span>big stuff.</span></span></h1>
     <p class="hero-sub load" style="--d:2">Signs, banners, backdrops, stationery and cutouts for weddings, events, realtors and businesses across the GTA. <strong>Upload, pick a size, see your price, check out.</strong> Done by Friday.</p>
     <div class="hero-ctas load" style="--d:3">
@@ -373,12 +373,6 @@ select.inp{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http
     <div class="bubble b5"><i>⭐</i><div><b>4.9 on Google</b><span>300+ reviews across the GTA</span></div></div>
   </div>
 </section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true"><div class="marquee-track">
-  <span>Foamboard</span><i>✦</i><span>Dance floor wraps</span><i>✦</i><span>Linen signs</span><i>✦</i><span>Yard signs</span><i>✦</i><span>Stationery</span><i>✦</i><span>Custom cutouts</span><i>✦</i><span>Awnings</span><i>✦</i><span>Newspaper</span><i>✦</i><span>Graphic design</span><i>✦</i>
-  <span>Foamboard</span><i>✦</i><span>Dance floor wraps</span><i>✦</i><span>Linen signs</span><i>✦</i><span>Yard signs</span><i>✦</i><span>Stationery</span><i>✦</i><span>Custom cutouts</span><i>✦</i><span>Awnings</span><i>✦</i><span>Newspaper</span><i>✦</i><span>Graphic design</span><i>✦</i>
-</div></div>
 
 <!-- ============ BRANDS ============ -->
 <section class="brands" aria-labelledby="brands-title">
@@ -533,7 +527,7 @@ select.inp{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http
       <figure class="frame f2 contain reveal"><img src="assets/placecards.png" alt="Burgundy calla lily place cards"><span>Place cards</span></figure>
       <figure class="frame f3 contain reveal"><img src="assets/monogram.png" alt="Gold mirror acrylic monogram"><span>Acrylic signs</span><span class="from">from $80</span></figure>
       <figure class="frame f4 reveal"><p class="label-big">Banners, backdrops <em>and lawn signs.</em></p></figure>
-      <figure class="frame f5 reveal"><p class="label-big">Decals, menus, posters, canvas.</p></figure>
+      <figure class="frame f5 reveal"><p class="label-big">Floor wraps, decals, menus, posters.</p></figure>
     </div>
   </div>
 </section>
@@ -699,41 +693,38 @@ select.inp{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http
 /* ---------- Rotating headline ---------- */
 (function(){
   const rot=document.getElementById('rot');if(!rot)return;
-  const words=['big stuff.','small stuff.','seating charts.','welcome signs.','weird shapes.','menus.','custom cutouts.','realtor signs.','dance floor wraps.','foamboard.','marketing materials.','banners.','backdrops.'];
+  const words=['big stuff.','small stuff.','seating charts.','welcome signs.','weird shapes.','menus.','floor wraps.','custom cutouts.','realtor signs.','foamboard.','marketing materials.','banners.','backdrops.'];
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  let i=0;const measure=document.createElement('span');measure.style.cssText='position:absolute;visibility:hidden;white-space:nowrap;padding:0 .1em';rot.appendChild(measure);
-  const fit=txt=>{measure.textContent=txt;rot.style.width=measure.offsetWidth+'px';};
-  fit(words[0]);
+  let i=0;
   setInterval(()=>{
-    const cur=rot.querySelector('span:not([style])');i=(i+1)%words.length;
-    cur.classList.add('out');fit(words[i]);
-    setTimeout(()=>{const n=document.createElement('span');n.textContent=words[i];n.className='in';rot.insertBefore(n,measure);cur.remove();},380);
+    const cur=rot.querySelector('span:not(.out)');i=(i+1)%words.length;
+    const n=document.createElement('span');n.textContent=words[i];n.className='in';
+    cur.classList.add('out');rot.appendChild(n);
+    setTimeout(()=>cur.remove(),600);
   },2600);
-  addEventListener('resize',()=>fit(words[i]));
 })();
 
-/* ---------- Looping print animation (runs in view, scroll scrubs it) ---------- */
+/* ---------- Looping print animation (constant loop, fast) ---------- */
 (function(){
   const scene=document.getElementById('scene'),prints=[...document.querySelectorAll('#feed .print')],label=document.getElementById('printLabel');
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const CYCLE=4200;
-  let t=0,last=null,running=false,lastScroll=scrollY;
+  const CYCLE=1500; // ms per sign: feed out, brief hold, drop
+  let t=0,last=null,running=true;
   const ease=x=>1-Math.pow(1-x,3);
   function render(){
     const total=t/CYCLE,idx=Math.floor(total)%prints.length,p=total-Math.floor(total);
     prints.forEach((el,i)=>{
       if(i!==idx){el.style.opacity=0;return;}
       el.style.opacity=1;const H=el.offsetHeight;
-      if(p<0.62){el.style.transform=`translateY(${(p/0.62-1)*H}px)`;}
+      if(p<0.55){el.style.transform=`translateY(${(p/0.55-1)*H}px)`;}
       else if(p<0.8){el.style.transform='translateY(0)';}
       else{const q=ease((p-0.8)/0.2);el.style.transform=`translateY(${q*160}px) rotate(${q*-5}deg)`;el.style.opacity=1-q;}
     });
     const lbl=prints[idx].dataset.label;
-    if(label.textContent!==lbl){label.classList.add('hide');setTimeout(()=>{label.textContent=lbl;label.classList.remove('hide')},250);}
+    if(label.textContent!==lbl){label.classList.add('hide');setTimeout(()=>{label.textContent=lbl;label.classList.remove('hide')},200);}
   }
   function frame(now){if(last!==null&&running&&!reduce)t+=now-last;last=now;render();requestAnimationFrame(frame);}
-  new IntersectionObserver(es=>es.forEach(e=>running=e.isIntersecting),{threshold:.2}).observe(scene);
-  addEventListener('scroll',()=>{const d=scrollY-lastScroll;lastScroll=scrollY;if(!reduce)t=Math.max(0,t+d*6);},{passive:true});
+  new IntersectionObserver(es=>es.forEach(e=>running=e.isIntersecting),{threshold:.05}).observe(scene);
   if(reduce)t=CYCLE*0.7;
   requestAnimationFrame(frame);
 })();
